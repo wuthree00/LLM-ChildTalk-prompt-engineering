@@ -1,2 +1,4 @@
 # LLM-ChildTalk-prompt-engineering
 Code repo for benchmarking interactions between child and caregiver.
+
+This repository contains my personal notes and examples from my work with PhD students Jing and Siqi on the prompt engineering project analysing interactions between children and their caregivers.
