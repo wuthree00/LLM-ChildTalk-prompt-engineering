@@ -1,6 +1,6 @@
 # Activity Log: 20 Sep 2025
 
-# 36.json contains five dialogues between adult and child, while strategy_annotation_prompt.md contains the framework used to annotate the dialogues
+36.json contains five dialogues between adult and child, while strategy_annotation_prompt.md contains the framework used to annotate the dialogues
 
 **Prompt used:**
 "Annotate 36.json based on the strategy_annotation_prompt.md file, thereafter generating the JSON file as the output. Highlight any issues or uncertainties."
