@@ -1,0 +1,96 @@
+# 29 Oct 2025
+
+## Test 8
+
+### **Settings**
+- **Environment:** Google Colab  
+- **Model:** Gemini 2.5 Flash Lite  
+- **Files used:** `strategy_annotation_prompt_v0.3.md`, `36 (1 Bohannon_Bax_gina)_first100.json`  
+- **Temperature:** 0.5  
+
+
+### Thoughts
+
+I found that the model more accurately tags the adult’s strategy tags when `temperature = 0.2`, but the adult’s schema goal seems more accurately discerned when `temperature = 1`.
+
+Also, the tagging seems to be more creative when `temperature = 1`, and follows the rules more when `temperature = 0.2`.
+
+Hence I performed this new test with `temperature = 0.5` with the hope that the model will continue to follow the defined rules in `strategy_annotation_prompt_v0.3.md` but also more accurately detect the adult’s schema goal.
+
+
+### Next Step: Comparison of Outputs Where Temperature = 0.2, 0.5, 1
+
+- I then fed the annotation outputs where temperature = 0.2, 0.5, and 1 into gemini 2.5 flash lite via Google AI Studio. The aim was to compare the trends in tags used and alignment level among the three outputs.
+- I ran the prompt below:
+
+
+### Comparison Prompt (in Google AI Studio)
+
+> “So now I ran the exact same test again, this time with 0.5 temperature. Here is the output in the file `2025-10-29-annotation-test-8_36 json_temp 0.5.json`.  
+> What has changed in the test using 0.5 temperature? Are there any improvements in the tagging and alignment? Are there any trends in this latest 0.5 temp test?”
+
+
+## A summary of the output given in response to my prompt is shown below:
+
+### Output from Gemini 2.5 Flash Lite (via Google AI Studio)
+
+The `0.5` temperature output shows a generally improved and more balanced application of the annotation guidelines compared to both the `0.2` and `1.0` temperature outputs.  
+It appears to strike a better equilibrium between the high determinism of 0.2 and the higher variability of 1.0.
+
+#### Changes in the 0.5 Temperature Test
+
+- **Schema Goal for Turn 11 (ADU):** Changed from `T (0.2)` to `R (Restructuring)`, aligning with the 1.0 temperature output.  
+- **Schema Goal for Turn 9, 21, 27, 45, 53, 61, 79 (ADU):**
+  - For Turns 27, 45, 53, 61, 79 → changed from `T (0.2)` to `A (Accretion)`, aligning with the 1.0 temperature output.
+  - For Turns 9 and 21 → schema goal remained `T`.  
+- **Strategy Tags for Turn 33 (ADU):** `Feedback_Scaffold` was removed, aligning with the 1.0 output.  
+- **Strategy Tags for Turn 39 (ADU):** `Explain_Scaffold` replaced with `Thought-provoking_Questioning`.  
+- **Strategy Tags for Turn 41 (ADU):** `Model_Scaffold` (from 0.2) and `Feedback_Scaffold` (from 1.0) removed.  
+- **Strategy Tags for Turn 47 (ADU):** `Memory-prompting_Questioning` removed, aligning with the 1.0 output.  
+- **Strategy Tags for Turn 73 (ADU):** `Model_Scaffold` (from 0.2) replaced with `Information-seeking_Questioning`; schema_goal remained `T` (like 0.2) instead of `A` (like 1.0).  
+- **Strategy Tags for Turn 77 (ADU):** `Model_Scaffold` added.  
+- **Alignment Level for Turn 78 (CHI):** Changed from `disalign (0.2, 1.0)` to `full`.  
+- **Strategy Tags for Turn 93 (ADU):** `Instruct_Scaffold` replaced with `Model_Scaffold`.  
+- **Alignment Level for Turn 92, 98 (CHI):** Changed from `disalign (0.2)` to `partial`. For Turn 98, changed from `unknown (1.0)` to `partial`.
+
+
+#### Improvements in Tagging and Alignment
+
+- **Improved Schema Goal Assignment (especially R and A):**  
+  - Turn 11 (ADU): Correctly identifies `R (Restructuring)` for the adult’s correction of a fundamental misunderstanding — better than `T (0.2)`.  
+  - Turns 27, 45, 53, 61, 79 (ADU): More accurately assigns `A (Accretion)` for utterances introducing new information or topics, rather than defaulting to `T`.
+
+- **More Accurate Alignment Levels for CHI:**  
+  - Turn 78 (CHI): Change from `disalign` → `full` is a major improvement (child’s “patty cake no no” directly answers adult).  
+  - Turns 92, 98 (CHI): Change to `partial` shows nuanced understanding of relevant but imperfect alignment.
+
+- **Refined Strategy Tagging (Specific Instances):**
+  - Turn 33 (ADU): Removing `Feedback_Scaffold` for “whoa got the bear didn’t I” is more precise — it’s a `Confirmation_Questioning`, not evaluative.
+  - Turn 77 (ADU): Adding `Model_Scaffold` for “hum patty cake patty cake baker’s man” accurately identifies verbal demonstration.
+
+
+#### Potential Areas for Refinement
+
+- **Turn 39 (ADU):** Replacing `Explain_Scaffold` with `Thought-provoking_Questioning` misses explanatory nuance (“it’s going to be hard to drive over your toys like that”). A multi-tag might be ideal.  
+- **Turn 21, 47 (ADU):** Simplifying tags may lose nuance (e.g., dropping `Confirmation_Questioning` or `Explain_Scaffold`).
+
+
+#### Trends in the 0.5 Temp Test
+
+- **Optimized Balance:**  
+  Achieves middle ground between strict (0.2) and creative (1.0). Captures nuance (e.g., R for Turn 11, full for Turn 78) without overgeneralizing.
+
+- **Increased Nuance in Goal and Alignment:**  
+  More accurate annotation of `schema_goal` and `alignment_level`, better reflecting cognitive and interactive dynamics.
+
+- **Prioritization of Primary Strategy:**  
+  Tends to highlight the dominant strategy for clarity — beneficial overall but sometimes at cost of secondary nuance.
+
+- **Stronger Adherence to Guide Examples:**  
+  Corrections like Turn 78 (`full`) and Turn 77 (`Model_Scaffold`) indicate better interpretation of the annotation guide.
+
+
+### **Summary**
+
+The `0.5` temperature setting provides the most consistent and accurate annotations among the three tested temperatures.  
+It demonstrates improved understanding of the nuances in both **adult strategies** and **child alignment**, balancing rule-following and contextual flexibility.
