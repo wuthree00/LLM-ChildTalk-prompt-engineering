@@ -2,7 +2,7 @@
 
 ## Refining the Prompt File
 
-I refined the definition of schema goals in the **strategy annotation prompt** file (v0.3), creating a new version called **strategy_annotation_prompt_v0.4.md**.
+I refined the definition of schema goals in the **strategy_annotation_prompt_v0.3.md** file, creating a new version called **strategy_annotation_prompt_v0.4.md**.
 
 The goal is to have the model better understand the distinctions between the schema development goals **Accretion**, **Tuning**, and **Restructuring** when determining the type of schema goals present in the adult’s utterance.
 
