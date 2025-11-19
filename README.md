@@ -22,9 +22,19 @@ It serves as a record of my work, tracking the experiments conducted, the analys
 
 ## Repository Structure
 
-This repository is organised into the following directories:
-*   **/experiments**: Contains detailed logs for each experimental run. Each file documents the model parameters, the specific prompt used, key excerpts from the raw output, and a qualitative analysis of the model's performance.
+This repository is organised to reflect the scientific workflow of the project:
+
+```plaintext
+LLM-ChildTalk-prompt-engineering/
+├── analyses/
+├── experiments/
+├── performance-metrics/
+├── prompt-refinements/
+└── README.md
+```
+
 *   **/analyses**: Holds comparative analyses that draw conclusions from multiple experiments, such as comparing model performance across different parameters (eg. temperature) or prompt versions.
+*   **/experiments**: Contains detailed logs for each experimental run. Each file documents the model parameters, the specific prompt used, key excerpts from the raw output, and a qualitative analysis of the model's performance.
 *   **/performance-metrics**: Contains the rubrics, scoring methodologies, and quantitative results (eg. accuracy rates) used to formally evaluate model performance.
 *   **/prompt-refinements**: A version-controlled history of the master prompt file (`strategy_annotation_prompt.md`). Each entry documents the specific changes made based on the findings from the experiments.
 
