@@ -25,6 +25,7 @@ I made major changes to the **strategy annotation prompt** file (**v0.4**) to im
     *   Emphasized that each unique tag should appear only once per turn.
     *   Sharpened the definitions for several scaffolding and questioning tags for greater clarity.
     *   Clarified that the list of “Common Multi-Strategy Combinations” is non-exhaustive.
+    *   Explicitly instructed the model to annotate sequentially, not skipping or adding any turns in the transcript.
 *   **Updated JSON Format:** Added a `"score": ""` field to the JSON structure to support quantitative evaluation of model performance.
 *   **General Cleanup:** Improved overall readability and removed extraneous text.
 
