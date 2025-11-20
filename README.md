@@ -6,7 +6,7 @@
 
 This repository documents an iterative prompt engineering project that analyzes how Large Language Models (LLMs) interpret and annotate child-adult dialogues according to cognitive linguistic guidelines.
 
-It serves as a record of my work, tracking the experiments conducted, the analysis of model performance, and the refinements made to the annotation prompts. This work is part of a larger collaboration with PhD students Jing Liu and Siqi Xie.
+It serves as a record of my work, tracking the experiments conducted, the analysis of model performance, and the refinements made to the annotation guidelines and the prompt generation code. This work is part of a larger collaboration with PhD students Jing Liu and Siqi Xie.
 
 
 ### Key Objectives
@@ -36,7 +36,9 @@ LLM-ChildTalk-prompt-engineering/
 *   **/analyses**: Holds comparative analyses that draw conclusions from multiple experiments, such as comparing model performance across different parameters (eg. temperature) or prompt versions.
 *   **/experiments**: Contains detailed logs for each experimental run. Each file documents the model parameters, the specific prompt used, key excerpts from the raw output, and a qualitative analysis of the model's performance.
 *   **/performance-metrics**: Contains the rubrics, scoring methodologies, and quantitative results (eg. accuracy rates) used to formally evaluate model performance.
-*   **/prompt-refinements**: A version-controlled history of the master prompt file (`strategy_annotation_prompt.md`). Each entry documents the specific changes made based on the findings from the experiments.
+*   **/prompt-refinements**: A version-controlled log of all refinements made to the prompt engineering process. This includes documentation for:
+    *   Guideline Refinements: Changes to the master annotation guide (`strategy_annotation_prompt.md`).
+    *   Code Refinements: Changes to the prompt generation logic within the main Colab notebook.
 
 
 ## Project Status
