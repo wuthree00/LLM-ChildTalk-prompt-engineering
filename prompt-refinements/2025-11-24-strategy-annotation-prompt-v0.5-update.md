@@ -2,7 +2,7 @@
 
 ## Overview
 
-Following the release of **strategy_annotation_prompt_v0.5.md** and the recent updates to the Colab `annotate_dialogue` function, I re-ran all 15 transcripts through the model to validate the new prompt and code changes.  
+Following the updates made to **strategy_annotation_prompt_v0.5.md** and the `annotate_dialogue` section in Colab, I re-ran all 15 transcripts through the model to test the efficacy of the new prompt and code changes.  
 Test 10 and 11 were conducted on 21 and 24 November 2025 respectively.  
 This log documents the testing outcomes, debugging steps, final JSON format updates, and observations about model reliability.  
 
