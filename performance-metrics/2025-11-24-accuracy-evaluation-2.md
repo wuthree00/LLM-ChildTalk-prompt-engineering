@@ -5,7 +5,7 @@
 
 **How**:  
 
-* Three transcripts were selected for detailed scoring. Each turn was evaluated according to the 0/3/5 rubric introduced in [version 2](https://github.com/wuthree00/LLM-ChildTalk-prompt-engineering/blob/main/performance-metrics/2025-11-24-accuracy-evaluation-2.md).  
+* Three transcripts were selected for detailed scoring. Each turn was evaluated according to the 0/3/5 rubric introduced in [version 2](https://github.com/wuthree00/LLM-ChildTalk-prompt-engineering/blob/main/performance-metrics/scoring-changelog.md#11-nov-2025--version-2-current).  
 
 * The purpose of this evaluation is to measure whether prompt v0.5 leads to improved alignment with the annotation guidelines, building on the methodology used earlier in *[4 Nov 2025 – Quantifying Accuracy Rate of Output](https://github.com/wuthree00/LLM-ChildTalk-prompt-engineering/blob/main/performance-metrics/2025-11-04-accuracy-evaluation-1.md)*.
 
