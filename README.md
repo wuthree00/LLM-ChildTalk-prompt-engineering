@@ -48,4 +48,4 @@ This project is under active development. The methodologies, prompts, and analys
 
 ## Acknowledgments
 
-This research is a collaborative effort with valuable contributions from Linguistics PhD students **Jing Liu** and **Siqi Xie**.
+This research is a collaborative effort with valuable contributions from Linguistics PhD students **[Jing Liu](https://sites.google.com/view/jliucog/home)** and **Siqi Xie**.
