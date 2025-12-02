@@ -1,29 +1,29 @@
 # Prompt File Comparison: v0.6 to v0.7
 
-## Aim of Changes & Rationale
+## Aim of changes & rationale
 
 The central goal of updating the prompt from v0.6 to v0.7 was to **eliminate "missing" schema goals** (`schema_goal: ""`) when an obvious educational strategy (like a question or instruction) was present.
 
 In v0.6, the prompt contained contradictory and vague rules that led the annotation model to frequently skip the schema goal.
 
-### Examples of What Went Wrong when v0.6 was used:
+### Examples of what went wrong when v0.6 was used:
 
 | Utterance | Tags Found | Problem |
 | :--- | :--- | :--- |
 | "what color is yours hum" | `["Information-seeking_Questioning"]` | No schema goal was tagged. The model correctly found a strategy, but incorrectly determined there was "no meaningful schema" goal. An Information-seeking question inherently attempts **Accretion (A)** of new knowledge. |
 | "whoa got the bear didn't i" | `["Confirmation_Questioning"]` | No schema goal was tagged. A Confirmation question attempts to verify shared knowledge, which is a clear instance of **Tuning (T)** the existing schema. The conflicting rules led to a missed tag. |
 
-### How Changes Were Made to Fix This:
+### How changes were made to fix this:
 
-The changes were made to **mandate a direct, non-negotiable link** between the explicit teaching behaviour (`strategy_tags`) and the corresponding cognitive goal (`schema_goal`):
+A rule was added, stating that a schema_goal was required whenever a strategy_tag was present.
 
-1.  **Prioritisation & Mandate:** The overall instructions were updated to state that assigning strategies is the *first* step, and the schema goal is the *second* step, explicitly requiring a goal if any strategy is found.
-2.  **Conflict Removal:** The vague, original exception note in Section 1.2, which caused the model to skip goals, was **deleted**.
+1.  **Dependency of Tags & Obligatory Appearance:** The overall instructions were updated to state that assigning strategies is the *first* step, and the schema goal is the *second* step, explicitly requiring a goal if any strategy is found.
+2.  **Conflict Removal:** The original note in Section 1.2 about leaving the schema_goal field empty in specific cases could have been perceived as a contradictory instruction, likely causing the model to skip goals. This was **deleted**.
 3.  **Cross-Reference Enforcement:** A new, simple rule was added to the "Mandatory Fields" section (Section 4) that forces the `schema_goal` to be 'A', 'T', or 'R' any time a strategy is tagged.
 
 ---
 
-## Summary of Changes from v0.6 to v0.7
+## Summary of changes from v0.6 to v0.7
 
 | Section | Change in v0.7 | Aim & Why |
 | :--- | :--- | :--- |
