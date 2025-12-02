@@ -6,12 +6,12 @@ The central goal of updating the prompt from v0.6 to v0.7 was to **eliminate "mi
 
 In v0.6, the prompt contained contradictory and vague rules that led the annotation model to frequently skip the schema goal.
 
-### Examples of What Went Wrong in v0.6:
+### Examples of What Went Wrong when v0.6 was used:
 
-| Utterance | v0.6 Tags Found | v0.6 Schema Goal | Problem |
-| :--- | :--- | :--- | :--- |
-| "what color is yours hum" | `["Information-seeking_Questioning"]` | `""` (Missing) | The model correctly found a strategy, but incorrectly determined there was "no meaningful schema" goal. An Information-seeking question inherently attempts **Accretion (A)** of new knowledge. |
-| "whoa got the bear didn't i" | `["Confirmation_Questioning"]` | `""` (Missing) | A Confirmation question attempts to verify shared knowledge, which is a clear instance of **Tuning (T)** the existing schema. The conflicting rules led to a missed tag. |
+| Utterance | Tags Found | Problem |
+| :--- | :--- | :--- |
+| "what color is yours hum" | `["Information-seeking_Questioning"]` | No schema goal was tagged. The model correctly found a strategy, but incorrectly determined there was "no meaningful schema" goal. An Information-seeking question inherently attempts **Accretion (A)** of new knowledge. |
+| "whoa got the bear didn't i" | `["Confirmation_Questioning"]` | No schema goal was tagged. A Confirmation question attempts to verify shared knowledge, which is a clear instance of **Tuning (T)** the existing schema. The conflicting rules led to a missed tag. |
 
 ### How Changes Were Made to Fix This:
 
