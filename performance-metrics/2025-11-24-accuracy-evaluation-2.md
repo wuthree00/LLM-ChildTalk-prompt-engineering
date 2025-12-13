@@ -99,7 +99,3 @@ Overall, **prompt v0.5 led to improved alignment with the strategy-annotation gu
 - More consistent differentiation between partial and full correctness  
 
 Improvements are consistent across transcripts, suggesting that the gains stem from the prompt revision rather than transcript-specific quirks. These findings reinforce that the refinements made to the prompt and annotation criteria were effective.
-
----
-
-If you want, I can also auto-generate the GitHub front-matter block (title, date, tags) to match the format of your repo.
