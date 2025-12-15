@@ -42,6 +42,6 @@ This document tracks revisions to the scoring system used to evaluate model anno
 **Structure:** Two scores per adult turn (one for strategy tags, one for schema goal), one per child turn (alignment level)  
 **Purpose:** Initial quantification of model annotation accuracy  
 **File scored:**
-> 36 (1 Bohannon_Bax_gina) first 100.json → **[Accuracy evaluation 1](https://github.com/wuthree00/LLM-ChildTalk-prompt-engineering/blob/main/logs/performance_metrics/2025-11-04-accuracy-evaluation-1.md)**
+> 36 (1 Bohannon_Bax_gina) first 100.json → **[Accuracy evaluation 1](https://github.com/wuthree00/LLM-ChildTalk-prompt-engineering/blob/main/performance-metrics/2025-11-04-accuracy-evaluation-1.md)**
 
 **Notes:** Provided results; further discussion revealed the need for finer scoring differentiation
