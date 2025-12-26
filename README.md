@@ -7,7 +7,7 @@
 
 ## About The Project
 
-This repository documents an iterative prompt engineering project that analyses how Large Language Models (LLMs) interpret and annotate child–adult dialogues according to cognitive linguistic guidelines. Using English child-adult conversation data from the CHILDES database, it tracks my experiments, evaluation of model performance, and refinements to both the annotation guidelines and the prompt generation code (in Colab). This work is part of a larger collaboration with PhD students Jing Liu and Siqi Xie.
+This repository documents an iterative prompt engineering project that analyses how Large Language Models (LLMs) interpret and annotate child-adult dialogues according to cognitive linguistic guidelines. Using English child-adult conversation data from the CHILDES database, it tracks my experiments, evaluation of model performance, and refinements to both the annotation guidelines and the prompt generation code (in Colab). This work is part of a larger collaboration with PhD students Jing Liu and Siqi Xie.
 
 This work represents one stage of a larger multi-step pipeline. My contribution focuses on developing, testing, and validating the prompt-based annotation process and its outputs. Later stages of the pipeline, including supervised fine-tuning (SFT) of the model, will be carried out by the research team.
 
